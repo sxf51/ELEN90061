@@ -13,6 +13,9 @@ def main():
                 s.sendall(msg.encode())
                 if msg.lower() == "exit":
                     print("Exiting client.")
+                    data = s.recv(1024)
+                    print("Received from server:", data.decode())
+                    s.shutdown(socket.SHUT_RDWR)
                     break
                 data = s.recv(1024)
                 print("Received from server:", data.decode())

@@ -22,7 +22,11 @@ def main():
                     timestamp = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
                     ack = f"Acknowledged at {timestamp}"
                     conn.sendall(ack.encode())
+                    if message.strip().lower() == "exit":
+                        print("Exit command received. Closing connection.")
+                        break
                 print(f"Connection with {addr} closed.")
 
 if __name__ == "__main__":
     main()
+    
