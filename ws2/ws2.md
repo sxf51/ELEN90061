@@ -264,8 +264,4 @@ while True:
 
 ![8](image-8.png)
 
-![9](image-9.png)
 
-![10](image-10.png)
-
-![11](image-11.png)
